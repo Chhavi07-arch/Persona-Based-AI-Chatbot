@@ -2,6 +2,8 @@ import { useState, useCallback } from "react";
 import PersonaSwitcher from "./components/PersonaSwitcher";
 import ChatWindow from "./components/ChatWindow";
 
+const API_BASE = "https://persona-chatbot-backend-2bbg.onrender.com";
+
 const PERSONAS = [
   { id: "anshuman", name: "Anshuman Singh", emoji: "🧠" },
   { id: "abhimanyu", name: "Abhimanyu Saxena", emoji: "🚀" },
@@ -58,7 +60,7 @@ export default function App() {
       setIsLoading(true);
 
       try {
-        const response = await fetch("/chat", {
+        const response = await fetch(`${API_BASE}/chat`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

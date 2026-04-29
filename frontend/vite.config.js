@@ -7,8 +7,8 @@ export default defineConfig({
     port: 3000,
     proxy: {
       // Forward /chat and /personas calls to the backend during development
-      "/chat": "http://localhost:3001",
-      "/personas": "http://localhost:3001",
+      "/chat": "https://persona-chatbot-backend-2bbg.onrender.com",
+      "/personas": "https://persona-chatbot-backend-2bbg.onrender.com",
     },
   },
 });
