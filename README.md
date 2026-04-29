@@ -4,6 +4,17 @@ A full-stack AI chatbot where users can have real conversations with 3 distinct 
 
 ---
 
+## 🌐 Live Demo
+
+| | URL |
+|---|---|
+| **Frontend** | [persona-chatbot-frontend-gilt.vercel.app](https://persona-chatbot-frontend-gilt.vercel.app/) |
+| **Backend** | [persona-chatbot-backend-2bbg.onrender.com](https://persona-chatbot-backend-2bbg.onrender.com) |
+
+> **Note:** Backend is hosted on Render's free tier. Initial requests may take 30–50 seconds due to cold start.
+
+---
+
 ## ✨ Features
 
 - 💬 **Chat Interface** — Clean, ChatGPT-style UI
@@ -123,14 +134,15 @@ Displayed in chat UI
 
 ## 🧬 Prompt Engineering
 
-Each persona is powered by a carefully designed **system prompt** that includes:
+Each persona is controlled entirely through a **system prompt** injected at the start of every API call. This tells the language model who it is, how to think, and how to respond — before the user says anything.
 
-- **Persona description** — who they are and what they value
-- **Communication style** — tone, structure, common phrases
-- **Few-shot examples** — sample Q&A to guide behavior
-- **Output constraints** — response length, ending with a question, etc.
+Key techniques used:
+- **System prompts** — define persona identity, tone, and beliefs
+- **Few-shot examples** — sample Q&A pairs inside the prompt to guide response style
+- **Behavioral constraints** — explicit rules for what the persona should and should not do
+- **Signature phrases** — recurring language patterns that make each persona feel distinct
 
-This makes each persona feel distinct and consistent across conversations.
+> See [`prompts.md`](./prompts.md) for full prompt engineering documentation.
 
 ---
 
