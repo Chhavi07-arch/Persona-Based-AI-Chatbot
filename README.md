@@ -37,13 +37,6 @@ A full-stack AI chatbot where users can have real conversations with 3 distinct 
 
 ---
 
-## 🖼️ Screenshots
-
-![Chat UI](./screenshots/chat.png)
-![Persona Switch](./screenshots/personas.png)
-
----
-
 ## 🗂️ Project Structure
 
 ```
